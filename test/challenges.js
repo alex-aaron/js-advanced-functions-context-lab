@@ -1,12 +1,16 @@
-let palindrome = 121;
+let palindrome = 1211;
 
 function isPalindrome(num) {
-    let numArr = num.toString();
+    let numToStr = num.toString();
     let reversedStr = "";
-    for (let i = numArr.length - 1; i > 0; i--) {
-        reversedStr += numArr[i];
+    for (let i = numToStr.length - 1; i >= 0; i--) {
+        reversedStr += numToStr[i];
     }
-    return reversedStr;
+    if (numToStr === reversedStr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 console.log(isPalindrome(palindrome));
