@@ -1,16 +1,8 @@
-let palindrome = 1211;
+let sampleOrder = "cba";
+let sampleStr = "abcd";
 
-function isPalindrome(num) {
-    let numToStr = num.toString();
-    let reversedStr = "";
-    for (let i = numToStr.length - 1; i >= 0; i--) {
-        reversedStr += numToStr[i];
-    }
-    if (numToStr === reversedStr) {
-        return true;
-    } else {
-        return false;
-    }
+function customSortStr(order, str) {
+    
 }
 
-console.log(isPalindrome(palindrome));
+customSortStr(sampleOrder, sampleStr);
