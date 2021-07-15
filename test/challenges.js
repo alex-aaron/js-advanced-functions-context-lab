@@ -1,15 +1,22 @@
-let sampleOrder = "cba";
-let sampleStr = "abcd";
+
 
 let sampleArr = [0, 2, 11, 7];
 
-function twoSum(nums, target) {
-    let targetArr = [];
+function arrSum(nums, target) {
+    let sumArr = [];
+  for (let i = 0; i < nums.length; i++) {
     let sum = 0;
     let count = 1;
     while (count < nums.length) {
-        sum = 
+      sum = nums[i] + nums[i + count];
+      if (sum === target) {
+        sumArr.push(i);
+        sumArr.push(i + count);
+      }
+      count ++;
     }
+  }
+  return sumArr;
 }
 
-twoSums(sampleArr, 9); add .add
+console.log(arrSum(sampleArr));
