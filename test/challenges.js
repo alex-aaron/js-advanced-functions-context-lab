@@ -2,8 +2,8 @@
 
 let sampleStr = "abcabcbb";
 
-function lengthOfLongestSubstring(str) {
-  return str;
+function lengthOfLongestSubstring(s) {
+  
 }
 
 console.log(lengthOfLongestSubstring(sampleStr));
