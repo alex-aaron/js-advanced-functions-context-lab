@@ -9,9 +9,17 @@ function lengthOfLongestSubstring(s) {
     let substring = s[i];
     let count = 1;
     while (substringArr.length < i + 1) {
-      
+      if (s[i + count] !== undefined && !substring.includes(i + count)) {
+        substring += s[i + count];
+        count++
+      } else {
+        substring.push(substring.length);
+      }
     }
   }
+  substringArr.sort();
+  substringLength = substringArr[substringArr.length - 1];
+  return substringLength;
 }
 
 console.log(lengthOfLongestSubstring(sampleStr));
